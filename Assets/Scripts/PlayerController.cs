@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
-   
+    public float jumpForce = 7f;
+    public float acceleration = 5f;
 
     private float MovementY;
     private float MovementX;
@@ -21,12 +22,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 newVelcoity = new Vector2(MovementX * speed, rb.linearVelocity.y);
+        float targetSpeed = MovementX * speed;
+        float newX = Mathf.MoveTowards(
+            rb.linearVelocity.x,
+            targetSpeed,
+            acceleration * Time.deltaTime
+        );
+        Vector2 newVelcoity = new Vector2(newX, rb.linearVelocity.y);
         rb.linearVelocity = newVelcoity;
     }   
 
-    public void onMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
         MovementX = context.ReadValue<Vector2>().x;
+    }   
+
+    public void onJump(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+
     }
 }
