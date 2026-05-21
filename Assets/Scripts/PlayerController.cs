@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    bool isFacingRight = false;
+
     public float speed = 5f;
     public float jumpForce = 7f;
     public float acceleration = 5f;
@@ -12,12 +14,13 @@ public class PlayerController : MonoBehaviour
     private float MovementX;
 
     public Rigidbody2D rb;
+    public Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }   
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -30,7 +33,21 @@ public class PlayerController : MonoBehaviour
         );
         Vector2 newVelcoity = new Vector2(newX, rb.linearVelocity.y);
         rb.linearVelocity = newVelcoity;
-    }   
+        Flip();
+
+        animator.SetFloat("Magnitude", rb.linearVelocity.magnitude);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && MovementX < 0 || !isFacingRight && MovementX > 0)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
