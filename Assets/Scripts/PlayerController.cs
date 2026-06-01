@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         Flip();
 
         animator.SetFloat("Magnitude", rb.linearVelocity.magnitude);
+        
     }
 
     private void Flip()
@@ -59,6 +60,12 @@ public class PlayerController : MonoBehaviour
         if(context.performed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            animator.SetTrigger("jump");
+        }
+        else if (context.canceled && rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 0.5f);
+            animator.SetTrigger("jump");
         }
 
     }
