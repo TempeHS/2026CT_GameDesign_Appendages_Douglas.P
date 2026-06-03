@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    public Transform groundCheckPos;
+    public Vector2 groundCheckSize = new Vector2( 0.5f, 0.5f);
+    public LayerMask groundLayer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +38,7 @@ public class PlayerController : MonoBehaviour
         Vector2 newVelcoity = new Vector2(newX, rb.linearVelocity.y);
         rb.linearVelocity = newVelcoity;
         Flip();
+        
 
         animator.SetFloat("Magnitude", rb.linearVelocity.magnitude);
         
@@ -57,16 +62,32 @@ public class PlayerController : MonoBehaviour
 
     public void onJump(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (isGrounded())
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            animator.SetTrigger("jump");
+            if(context.performed)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                animator.SetTrigger("jump");
+            }
+            else if (context.canceled && rb.linearVelocity.y > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
         }
-        else if (context.canceled && rb.linearVelocity.y > 0)
+    }
+    
+    private bool isGrounded()
+    {
+        if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0 , groundLayer))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 0.5f);
-            animator.SetTrigger("jump");
+            return true;
         }
+        return false;
+    }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
     }
 }
