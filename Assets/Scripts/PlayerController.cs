@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = ls;
         }
     }
-
+    // add an initial slow to the movment, mabye decrease acceleration, cuz water resists movement more than air    
     public void OnMove(InputAction.CallbackContext context)
     {
         MovementX = context.ReadValue<Vector2>().x;
