@@ -1,10 +1,40 @@
 fileFormatVersion: 2
-guid: 6d68206aab45ef841b4f3ba4f0320c02
+guid: 82da02e9847e269469a9c1631b1889ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 266503192881829738
-    second: Background FINAL_0
+      213: 2373183141213679312
+    second: New Piskel (6)_0
+  - first:
+      213: 2692668872550476181
+    second: New Piskel (6)_1
+  - first:
+      213: -7693382868939088697
+    second: New Piskel (6)_2
+  - first:
+      213: 6341370224737695196
+    second: New Piskel (6)_3
+  - first:
+      213: 1329696334464466907
+    second: New Piskel (6)_4
+  - first:
+      213: 4334171132609126982
+    second: New Piskel (6)_5
+  - first:
+      213: -5587219251741293468
+    second: New Piskel (6)_6
+  - first:
+      213: 8153785213593319801
+    second: New Piskel (6)_7
+  - first:
+      213: 8507025820030227789
+    second: New Piskel (6)_8
+  - first:
+      213: -344888179715434319
+    second: New Piskel (6)_9
+  - first:
+      213: -5288153311091106340
+    second: New Piskel (6)_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +105,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,13 +182,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background FINAL_0
+      name: New Piskel (6)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5400
-        width: 5760
-        height: 1080
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,118 +197,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a679a3fed3fc2b300800000000000000
-      internalID: 266503192881829738
+      spriteID: 0deacf64e7d3fe020800000000000000
+      internalID: 2373183141213679312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background FINAL_1
+      name: New Piskel (6)_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4320
-        width: 5760
-        height: 1080
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ff0a6ece744f9449a8970fbc9355386
-      internalID: 1962719669
+      spriteID: 5996f1eb2184e5520800000000000000
+      internalID: 2692668872550476181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background FINAL_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3240
-        width: 5760
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6443e14b9cb6bb8489fb8ba1d54b2c44
-      internalID: 1757970810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Background FINAL_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2160
-        width: 5760
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3153c60bdc626a4c9334fd1fc4bdad9
-      internalID: -956430361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Background FINAL_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1080
-        width: 5760
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62e12ef666f7ed5488f6304fdc54a654
-      internalID: -183323859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Background FINAL_5
+      name: New Piskel (6)_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 5760
-        height: 1080
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 717726d763c450e4091f616ab1718007
-      internalID: 737624654
+      spriteID: 7cc5fcfba0d9b3590800000000000000
+      internalID: -7693382868939088697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (6)_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5bab21f92110850800000000000000
+      internalID: 6341370224737695196
       vertices: []
       indices: 
       edges: []
@@ -287,7 +273,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 092b912380be39d46b5f5a9b4b6f2728
+    spriteID: 072ad0e9a5aaaea49acec1db28c35edc
     internalID: 0
     vertices: []
     indices: 
@@ -297,12 +283,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Background FINAL_0: 266503192881829738
-      Background FINAL_1: 1962719669
-      Background FINAL_2: 1757970810
-      Background FINAL_3: -956430361
-      Background FINAL_4: -183323859
-      Background FINAL_5: 737624654
+      New Piskel (6)_0: 2373183141213679312
+      New Piskel (6)_1: 2692668872550476181
+      New Piskel (6)_2: -7693382868939088697
+      New Piskel (6)_3: 6341370224737695196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
