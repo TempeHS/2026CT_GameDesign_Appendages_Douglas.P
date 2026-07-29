@@ -1,6 +1,6 @@
-# Project Title
+# Appendages
 
-Simple overview of use/purpose.
+a small game about a crab collecting human limbs
 
 ## Description
 
