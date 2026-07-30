@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         Vector2 newVelcoity = new Vector2(newX, rb.linearVelocity.y);
         rb.linearVelocity = newVelcoity;
         Flip();
-        
+        WallDetect();
 
         animator.SetFloat("Magnitude", rb.linearVelocity.magnitude);
         
@@ -89,5 +89,17 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
+    }
+
+    private void WallDetect()
+    {
+        int layerIndex = LayerMask.NameToLayer("Background");
+        int layerMask = ~(1 << layerIndex);
+
+    RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right,10.0f,layerMask);
+
+    if(hit) {
+        Debug.Log("Hit: " + hit.collider.gameObject.layer);
+    }
     }
 }
