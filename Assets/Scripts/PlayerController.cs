@@ -93,13 +93,15 @@ public class PlayerController : MonoBehaviour
 
     private void WallDetect()
     {
-        int layerIndex = LayerMask.NameToLayer("Background");
-        int layerMask = ~(1 << layerIndex);
 
-    RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right,10.0f,layerMask);
+         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+       // int layerIndex = LayerMask.NameToLayer("Background");
+        //int layerMask = ~(1 << layerIndex);  layerMask
 
-    if(hit) {
-        Debug.Log("Hit: " + hit.collider.gameObject.layer);
-    }
+            //RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right,10.0f);
+
+        float distance = Mathf.Abs(hit.point.y - transform.position.y);
+        Debug.Log("Hit: " + distance);
     }
 }
+
