@@ -2527,6 +2527,7 @@ GameObject:
   - component: {fileID: 1227352533}
   - component: {fileID: 1227352534}
   - component: {fileID: 1227352535}
+  - component: {fileID: 1227352536}
   m_Layer: 0
   m_Name: HermitPlayer
   m_TagString: Untagged
@@ -2872,6 +2873,18 @@ MonoBehaviour:
   brain: {fileID: 485173742}
   eyeball: {fileID: 358979123}
   foot: {fileID: 1873006947}
+--- !u!114 &1227352536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227352527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ee818294662804cbf02792e9b4d49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1335074994
 GameObject:
   m_ObjectHideFlags: 0
