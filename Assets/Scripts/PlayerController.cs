@@ -20,10 +20,12 @@ public class PlayerController : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2( 0.5f, 0.5f);
     public LayerMask groundLayer;
 
+    private Death death;    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        death = GetComponent<Death>();
     }
 
     // Update is called once per frame
@@ -39,8 +41,13 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = newVelcoity;
         Flip();
         
-
         animator.SetFloat("Magnitude", rb.linearVelocity.magnitude);
+
+        if (Input.GetKeyDown("h"))
+        {
+            death.Dead();
+            Debug.Log("h key was pressed");
+        }
         
     }
 
