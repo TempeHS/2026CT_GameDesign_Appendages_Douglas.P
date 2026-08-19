@@ -3,6 +3,7 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     public GameObject death;
+ 
    void Start()
     {
     death.SetActive(false);
@@ -11,6 +12,7 @@ public class Death : MonoBehaviour
     public void Dead()
     {
         death.SetActive(true);
+        bool isAlive = false;
         // have code that stops you from moving
         // have code that waits
         // have code that ends everything
