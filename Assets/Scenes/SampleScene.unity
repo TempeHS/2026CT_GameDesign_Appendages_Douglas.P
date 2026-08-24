@@ -3132,6 +3132,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  isAlive: 1
 --- !u!95 &1227352534
 Animator:
   serializedVersion: 7

@@ -3,10 +3,10 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     public GameObject death;
- 
-   void Start()
+    void Start()
     {
     death.SetActive(false);
+    bool isAlive = GetComponent<PlayerController>().isAlive;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Dead()

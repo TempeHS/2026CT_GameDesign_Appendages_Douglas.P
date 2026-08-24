@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private Death death;    
 
+    public bool isAlive = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -64,7 +66,12 @@ public class PlayerController : MonoBehaviour
     // add an initial slow to the movment, mabye decrease acceleration, cuz water resists movement more than air    
     public void OnMove(InputAction.CallbackContext context)
     {
+        if(isAlive == true){
         MovementX = context.ReadValue<Vector2>().x;
+        }
+        else{
+            Debug.Log("mmmmmm i like little russian men");
+        }
     }   
 
     public void onJump(InputAction.CallbackContext context)
