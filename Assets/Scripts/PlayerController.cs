@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private Death death;    
 
-    public bool isAlive = true;
+    public Death scripta;
+    public bool Alivecheck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,8 +49,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("h"))
         {
             death.Dead();
-            Debug.Log("h key was pressed");
         }
+        Alivecheck = scripta.IsAlive;
         
     }
 
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour
     // add an initial slow to the movment, mabye decrease acceleration, cuz water resists movement more than air    
     public void OnMove(InputAction.CallbackContext context)
     {
-        if(isAlive == true){
+        if(Alivecheck == true){
         MovementX = context.ReadValue<Vector2>().x;
         }
         else{
