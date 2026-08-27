@@ -20,10 +20,15 @@ public class PlayerController : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2( 0.5f, 0.5f);
     public LayerMask groundLayer;
 
+    private Death death;    
+
+    public Death scripta;
+    public bool Alivecheck;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        death = GetComponent<Death>();
     }
 
     // Update is called once per frame
@@ -39,8 +44,13 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = newVelcoity;
         Flip();
         
-
         animator.SetFloat("Magnitude", rb.linearVelocity.magnitude);
+
+        if (Input.GetKeyDown("h"))
+        {
+            death.Dead();
+        }
+        Alivecheck = scripta.IsAlive;
         
     }
 
@@ -57,7 +67,12 @@ public class PlayerController : MonoBehaviour
     // add an initial slow to the movment, mabye decrease acceleration, cuz water resists movement more than air    
     public void OnMove(InputAction.CallbackContext context)
     {
+        if(Alivecheck == true){
         MovementX = context.ReadValue<Vector2>().x;
+        }
+        else{
+            Debug.Log("mmmmmm i like little russian men");
+        }
     }   
 
     public void onJump(InputAction.CallbackContext context)
