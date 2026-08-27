@@ -2,13 +2,13 @@
 
 | Field | Detail |
 |---|---|
-| **Game Title** | |
-| **Student Name(s)** | |
-| **Class / Course** | |
-| **Repository** | |
-| **Unity Version** | |
-| **Document Version** | |
-| **Date** | |
+| **Game Title** | Appendages|
+| **Student Name(s)** |Douglas.P |
+| **Class / Course** |26 CT |
+| **Repository** |2026CT_GameDesign_Appendages_Douglas.P |
+| **Unity Version** |6000.0.58f1 |
+| **Document Version** |0.1 |
+| **Date** |27/08/2026|
 
 ---
 
