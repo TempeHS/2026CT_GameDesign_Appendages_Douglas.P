@@ -20,6 +20,7 @@ public class Item_Collector : MonoBehaviour
     brain.SetActive(false);
     eyeball.SetActive(false);
     foot.SetActive(false);
+    
     }
 
     // Update is called once per frame
