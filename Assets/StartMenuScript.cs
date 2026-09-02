@@ -1,16 +1,19 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMenuScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    public void OnStartClick()
     {
-        
+        SceneManager.LoadScene("SampleScene");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnQuitClick()
     {
-        
+        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
