@@ -10,8 +10,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 7f;
     public float acceleration = 5f;
 
+
     private float MovementY;
     private float MovementX;
+    private float nun = 0f;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             death.Dead();
         }
+
         Alivecheck = scripta.IsAlive;
         
     }
@@ -72,6 +75,7 @@ public class PlayerController : MonoBehaviour
         }
         else{
             Debug.Log("mmmmmm i like little russian men");
+            MovementX = nun;
         }
     }   
 
