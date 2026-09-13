@@ -6,7 +6,8 @@ public class StartMenuScript : MonoBehaviour
     
     public void OnStartClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("LevelOne");
+        // could add cutscene here
     }
 
     public void OnQuitClick()

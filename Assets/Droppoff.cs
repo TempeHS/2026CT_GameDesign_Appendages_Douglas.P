@@ -42,7 +42,8 @@ public class Droppoff : MonoBehaviour
         heartCover.SetActive(false);
         brainCover.SetActive(false);
         eyeballCover.SetActive(false);
-        footCover.SetActive(false);  
+        footCover.SetActive(false); 
+
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -65,21 +66,18 @@ public class Droppoff : MonoBehaviour
             EyeballValue = EyeballCheck;
             FootValue = FootCheck;
 
-            Debug.Log("Player collided with the trigger!");
-
+            mylist.Add(BoneValue);
+            mylist.Add(HandValue);
+            mylist.Add(HeartValue);
+            mylist.Add(BrainValue);
+            mylist.Add(EyeballValue);
+            mylist.Add(FootValue); 
             /* Debug.Log(BoneCheck);
              Debug.Log(HandCheck);
              Debug.Log(HeartCheck);
              Debug.Log(BrainCheck);
              Debug.Log(EyeballCheck);
              Debug.Log(FootCheck);   */
-
-            mylist.Add(BoneValue);
-            mylist.Add(HandValue);
-            mylist.Add(HeartValue);
-            mylist.Add(BrainValue);
-            mylist.Add(EyeballValue);
-            mylist.Add(FootValue);
 
             // reveal smile for objects that have been found
             if (BoneCheck == true)
@@ -107,7 +105,8 @@ public class Droppoff : MonoBehaviour
                 footCover.SetActive(true);
             }
 
-
+            string allValues = string.Join(", ", mylist);
+            Debug.Log("Bool List: " + allValues);
             // if so DEBUG YOU WIN
 
 
@@ -117,7 +116,10 @@ public class Droppoff : MonoBehaviour
             {
                 Debug.Log("All conditions met!");
             }
-                      
+
+
+
+            mylist.Clear();           
         }
     }
 }
