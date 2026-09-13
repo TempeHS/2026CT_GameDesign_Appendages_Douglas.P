@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Droppoff : MonoBehaviour
 {
@@ -115,6 +116,10 @@ public class Droppoff : MonoBehaviour
             if (allAreTrue)
             {
                 Debug.Log("All conditions met!");
+                // reveal a object that says stuff
+                //play animation (bubbles)
+                //wait while bubbles play
+                SceneManager.LoadScene("LevelTwo");
             }
 
 
