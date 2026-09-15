@@ -22,6 +22,10 @@ public class Droppoff : MonoBehaviour
     public GameObject eyeballCover;
     public GameObject footCover;
 
+    public GameObject Welcome;
+    public GameObject NotEnough;
+    public GameObject YIPPIE;
+
     public bool BoneValue;
     public bool HandValue;
     public bool HeartValue;
@@ -43,7 +47,9 @@ public class Droppoff : MonoBehaviour
         heartCover.SetActive(false);
         brainCover.SetActive(false);
         eyeballCover.SetActive(false);
-        footCover.SetActive(false); 
+        footCover.SetActive(false);
+        NotEnough.SetActive(false);
+        YIPPIE.SetActive(false);
 
     }
     
@@ -52,6 +58,7 @@ public class Droppoff : MonoBehaviour
         //on collide with player check what things it has
         if (collision.CompareTag("Player"))
         {
+            Welcome.SetActive(false);
             //mark those objects here
             BoneCheck = BPScript.Bone;
             HandCheck = BPScript.Hand;
@@ -116,10 +123,18 @@ public class Droppoff : MonoBehaviour
             if (allAreTrue)
             {
                 Debug.Log("All conditions met!");
-                // reveal a object that says stuff
-                //play animation (bubbles)
-                //wait while bubbles play
+                YIPPIE.SetActive(true);
+                //animation trigger
+                //waiitttttt
                 SceneManager.LoadScene("LevelTwo");
+            }
+            else
+            {
+                NotEnough.SetActive(true);
+                YIPPIE.SetActive(false);
+                Debug.Log("Not all conditions met.");
+                //reveal other sign
+                //animation trigger
             }
 
 
