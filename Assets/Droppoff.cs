@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class Droppoff : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class Droppoff : MonoBehaviour
 
     }
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private async void OnTriggerEnter2D(Collider2D collision)
     {
         //on collide with player check what things it has
         if (collision.CompareTag("Player"))
@@ -124,14 +125,14 @@ public class Droppoff : MonoBehaviour
             {
                 Debug.Log("All conditions met!");
                 YIPPIE.SetActive(true);
+                 NotEnough.SetActive(false);
                 //animation trigger
-                //waiitttttt
+                await Task.Delay(3000);
                 SceneManager.LoadScene("LevelTwo");
             }
             else
             {
                 NotEnough.SetActive(true);
-                YIPPIE.SetActive(false);
                 Debug.Log("Not all conditions met.");
                 //reveal other sign
                 //animation trigger
