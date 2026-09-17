@@ -11,6 +11,7 @@ TagManager:
   - heart
   - hand
   - Depot
+  - Evil
   layers:
   - Default
   - TransparentFX
