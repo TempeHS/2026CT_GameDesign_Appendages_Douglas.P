@@ -57,6 +57,14 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Evil"))
+        {
+            death.Dead();
+        }
+    }
+
     private void Flip()
     {
         if (isFacingRight && MovementX < 0 || !isFacingRight && MovementX > 0)
