@@ -2,13 +2,13 @@
 
 | Field | Detail |
 |---|---|
-| **Game Title** | |
-| **Student Name(s)** | |
-| **Class / Course** | |
-| **Repository** | |
-| **Unity Version** | |
-| **Document Version** | |
-| **Date** | |
+| **Game Title** |Hermit Hunter|
+| **Student Name(s)** |Douglas Percival |
+| **Class / Course** |Computer Technologies YR10 2026 term  |
+| **Repository** | 2026CT_GameDesign_Appendages_Douglas.P|
+| **Unity Version** |6000.0.58f1 |
+| **Document Version** |0.9.0 |
+| **Date** |24/09/2026|
 
 ---
 
@@ -40,15 +40,16 @@ this is nothing but a playful referrence the other game.
 ### 1.2 Target Audience
 The target audience for the game is preteens who find humour in slightly macabre scenareos but arent actaully looking for anything dark or horrific.
 its a light hearted platformer game that is moderately difficult and uses some dark elements for humour.
+We chose the audience because we wanted to replicate a game like dave the diver but with some dark comedy undertones, however this audience comes with the limitation of not being able to go too dark or gorey as our audience is young, we must also be careful to finely adjust the difficulty for our players as their moter skills are not highly devoloped.
 
 ### 1.3 Game Summary
-The Player spawns in next to a "MORG"(morgue) with a strange creature inside asking the player to track down lost limbs, the player will then explore the map and collect the items as they find them and return them to the MORG in order to complete the level, all the while utilising parkour mechanics to avoid dangerous spikes and get to new locations to collect hard to reach limbs.
+The Player spawns in next to a "MORG"(morgue) with a strange creature inside asking the player to track down lost limbs, the player will then explore the map and collect the items as they find them and return them to the MORG in order to complete the level, all the while utilising parkour mechanics to avoid dangerous spikes and get to new locations to collect hard to reach limbs, after collecting all limbs the player must return to the MORG where they will be sent to the next level.
 
 ### 1.4 Win / Loss Conditions
 | Condition | Description |
 |---|---|
-| Win | |
-| Loss | |
+| Win |Collect all 6 body parts and make it to the MORG |
+| Loss | Touch a spike |
 
 ### 1.5 Platform & Build Settings
 | Setting | Detail |
