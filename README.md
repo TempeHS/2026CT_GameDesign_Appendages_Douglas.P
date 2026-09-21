@@ -31,13 +31,18 @@
 ## 1. Game Overview
 
 ### 1.1 Genre
-
+Hermit hunter is an platforming style dark comedy exploration game. 
+The player will attempt to explore the map to gather collectables that are in reality human limbs while doing parkour using simple mechanics to avoid death and reach new areas.
+The games style takes inspiriraton from games like "kindergarten" and "Dave the Diver" to get its colourful pallete but slightly darker references to bodys or limbs that are nevertheless referred to lightly.
+certain elements of the games UI take inspiration from the Souls-Like game "ELDEN RING" in both the style of the menu and the death animation,
+this is nothing but a playful referrence the other game.
 
 ### 1.2 Target Audience
-
+The target audience for the game is preteens who find humour in slightly macabre scenareos but arent actaully looking for anything dark or horrific.
+its a light hearted platformer game that is moderately difficult and uses some dark elements for humour.
 
 ### 1.3 Game Summary
-
+The Player spawns in next to a "MORG"(morgue) with a strange creature inside asking the player to track down lost limbs, the player will then explore the map and collect the items as they find them and return them to the MORG in order to complete the level, all the while utilising parkour mechanics to avoid dangerous spikes and get to new locations to collect hard to reach limbs.
 
 ### 1.4 Win / Loss Conditions
 | Condition | Description |
