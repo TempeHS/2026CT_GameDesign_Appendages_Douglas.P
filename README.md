@@ -51,7 +51,7 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 | Win |Collect all 6 body parts and make it to the MORG |
 | Loss | Touch a spike |
 
-### 1.5 Platform & Build Settings
+### 1.5 Platform & Build Settings - ask jones
 | Setting | Detail |
 |---|---|
 | Target Platform | |
@@ -67,7 +67,9 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 <!--
   Embed a YouTube/Vimeo video or link to a file in the repository.
   YouTube embed syntax:
-  [![Video Title](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+  
+HermitHunter2dGame(https://img.youtube.com/vi/SUJwRp6EE3o/0.jpg)](https://www.youtube.com/watch?v=SUJwRp6EE3o)
+
 
   OR link to a local file:
   [Watch Walkthrough Video](./docs/video/walkthrough.mp4)
@@ -75,12 +77,12 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 
 | Field | Detail |
 |---|---|
-| **Video Title** | |
-| **Link / Embed** | |
-| **Duration** | |
-| **Description** | |
+| **Video Title** | HermitHunter2dGame |
+| **Link / Embed** |https://www.youtube.com/watch?v=SUJwRp6EE3o
+| **Duration** |1:59 |
+| **Description** |Walkthrough of my game, showing most of the features with narration of what they are. youtube description is "Game made for Ct project 2026"|
 
-### 2.2 Feature Highlight Clips
+### 2.2 Feature Highlight Clips  - ask jones
 
 | Clip | Description | Link |
 |---|---|---|
@@ -95,41 +97,41 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 ### 3.1 Core Mechanics
 | ID | Mechanic | Description | Implemented In (Script/Object) |
 |---|---|---|---|
-| M-1 | | | |
-| M-2 | | | |
-| M-3 | | | |
-| M-4 | | | |
-| M-5 | | | |
+| M-1 |Double Jump Bubbles |These little bubbles can be jumped on as if they were solid ground, but standing still will cause the player to fall through, making for unique parkour|BooblePREFAB, no script, just tagged as ground with the collider set to trigger|
+| M-2 |Death |the player dies, this can happen when it touches a spike, or in the full build if it falls off the map, an animation plays, movement is frozen, then the scene resets |"Death" script contains the code for the death itself, actually causing it can be called in any script, but is currently called in player controller |
+| M-3 |Collections |the player touches an item and it appears in the inventory on the top left|"Item_Collector" Script on the player |
+| M-4 |Depot |a small building that the player can walk into to check off the collected items, have an npc talk to the player, or finish the level |Droppoff script on Depot object |
+| M-5 |Parralax |as the player moves across the world objects in the background appear to move slower than in the foreground |achived by setting camera projection to perspective and then using 3d scene editor to actually place certain objects further back |
 
 ### 3.2 Player Controls
 | Action | Input (Keyboard / Controller) | Description |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+|Left/Right movement |AD or arrow keys | these keys allow the player to move left or right |
+|Jump |Space |Can be done while on the ground or while touching a bubble while falling in midair |
+|Buttons | mouse|click buttons on the homescreen with your mouse |
+
 
 ### 3.3 Physics & Collision
 | Feature | Description |
 |---|---|
-| | |
-| | |
-| | |
+|Bubble collisons |The bubbles are layered in the ground layer but their hitbox is only a trigger, this means that they check the "isground" check in the player controller and allow the player to jump while touching them, but arent considered something the player can stand on or walk over because the hitbox only triggers this function |
+|Spike collison |in the player controller  script if the player is detected touching something with the  "Evil" tag, then it will play the death function |
+|Player gravity | the player has gravity due to the rigidbody 2d and box collider 2d components, the players Z rotation is also frozen to prevent tipping over when on a ledge|
 
 ### 3.4 Game Loop
 | Stage | Description |
 |---|---|
-| Start / Initialisation | |
-| Core Loop | |
-| Win / End State | |
-| Restart | |
+| Start / Initialisation | The player loads into the level and meets the NPC who asks them to search the level for limbs|
+| Core Loop | The player searches the level and returns the limbs to the NPC to get dialoge and have their collected items checked off|
+| Win / End State |The player collects all Limbs and returns them to the NPC without Dying |
+| Restart |The player dies on a spike and restarts the level OR wins and the next level startswhere the process repeats |
 
 ### 3.5 Scoring & Progression
 | Element | Description |
 |---|---|
-| Scoring System | |
-| Difficulty Progression | |
-| Unlockables / Levels | |
+| Scoring System |The amount of limbs you have are recorded in the top left corner, if you visit the MORG without all the limbs than the ones you have will be covered with a smiley face, in a later build of the game the smiley face could mean you wont lose that limb when you die |
+| Difficulty Progression |Certain limbs are harder skillwise and more dangerous (spikes) to reach than others, acting as difficulty for the game |
+| Unlockables / Levels |There is one secondary level that the player can load into, however any amount of levels could be created and cutscenes could be added |
 
 ---
 
@@ -139,16 +141,15 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 
 | Effect Name | Purpose | Screenshot |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+|Standing Bubbles |Small trail of bubbles that constantly emit from the player for aesthetic purposes |![Bubbles](image.png) |
+|Death Bubbles |Huge amount of bubbles released when the player dies that fade from red to blue to signifiy death |![DeathBubbles](image-1.png) |
 
-> Add screenshot images using: `![Effect Name](./docs/screenshots/effect_name.png)`
+
+
 
 ---
 
-### 4.2 Cut Scenes & Cinematics
+### 4.2 Cut Scenes & Cinematics - ask jones what to write
 
 | Cut Scene | Trigger | Description | Screenshot / Still |
 |---|---|---|---|
@@ -156,7 +157,7 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 | | | | |
 | | | | |
 
-> Add screenshot images using: `![Cut Scene Name](./docs/screenshots/cutscene_name.png)`
+
 
 ---
 
@@ -164,11 +165,11 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 
 | Animation | Object / Character | Description | Screenshot |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+|Idle Bob |HermitPlayer|a little animation of the player bobbing up and down while it stands still |![Idle](image-9.png) |
+|FallingScaddle |HermitPlayer |While the player falls the crab wiggles its legs |![Fall](image-10.png) |
+|BackgroundFish |backgroundFish |small animation of fish swimming in schools in the background, right now its just a placeholder |![Fish](image-8.png) |
 
-> Add screenshot images using: `![Animation Name](./docs/screenshots/animation_name.png)`
+
 
 ---
 
@@ -180,7 +181,7 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 | | | |
 | | | |
 
-> Add screenshot images using: `![Feature Name](./docs/screenshots/lighting_name.png)`
+
 
 ---
 
@@ -188,30 +189,23 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 
 | Shader / Material | Applied To | Description | Screenshot |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+|Frictionless 2d |Player |Makes the player less likely to get stuck on or between walls due to no friction   |![Slippery](image-5.png) |
 
-> Add screenshot images using: `![Shader Name](./docs/screenshots/shader_name.png)`
+
 
 ---
 
 ### 4.6 Additional Visual Screenshots
 
-<!--
-  Add any other notable screenshots here.
-  Syntax: ![Description](./docs/screenshots/filename.png)
--->
-
 | Description | Screenshot |
 |---|---|
-| | |
-| | |
-| | |
+|Death Screen |![Death](image-2.png) |
+|Smile Coverings |![Smile](image-3.png) |
+|MORG | ![MORG](image-4.png)|
 
 ---
 
-## 5. Audio Design
+## 5. Audio Design - ask jones
 
 ### 5.1 Music
 | Track | Scene / Trigger | Source / Composer |
@@ -241,19 +235,16 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 ### 6.1 HUD Elements
 | Element | Purpose | Screenshot |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|Inventory|Shows what you have and havent collected | ![Inventory](image-11.png)|
+|Smiles |Shows what items you had when you last returned to the MORG |![Smiles](image-12.png) |
 
 > Add screenshot images using: `![HUD Element](./docs/screenshots/hud_name.png)`
 
 ### 6.2 Menus
 | Menu | Purpose | Screenshot |
 |---|---|---|
-| Main Menu | | |
-| Pause Menu | | |
-| Game Over Screen | | |
-| | | |
+| Main Menu |allows the player to begin the game or exit, more features could be added | ![Menu](image-13.png)|
+| Game Over Screen |Shows that the player is dead | ![DeathScreen](image-14.png)|
 
 > Add screenshot images using: `![Menu Name](./docs/screenshots/menu_name.png)`
 
