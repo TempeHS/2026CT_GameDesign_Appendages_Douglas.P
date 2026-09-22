@@ -207,26 +207,7 @@ HermitHunter2dGame(https://img.youtube.com/vi/SUJwRp6EE3o/0.jpg)](https://www.yo
 
 ## 5. Audio Design - ask jones
 
-### 5.1 Music
-| Track | Scene / Trigger | Source / Composer |
-|---|---|---|
-| | | |
-| | | |
-
-### 5.2 Sound Effects
-| Sound Effect | Trigger | Source |
-|---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
-
-### 5.3 Audio Implementation
-| Feature | Description |
-|---|---|
-| Audio Mixer / Groups | |
-| Spatial / 3D Audio | |
-| Dynamic Audio | |
+N/A, This game has NO audio as we were unable to create good enough sound effects that matched the underwater theme, furthermore the multimedia student on the proect didnt have music experience, and so i was given no audio to implement.
 
 ---
 
