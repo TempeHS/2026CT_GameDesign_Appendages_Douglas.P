@@ -51,12 +51,11 @@ The Player spawns in next to a "MORG"(morgue) with a strange creature inside ask
 | Win |Collect all 6 body parts and make it to the MORG |
 | Loss | Touch a spike |
 
-### 1.5 Platform & Build Settings - ask jones
+### 1.5 Platform & Build Settings
 | Setting | Detail |
 |---|---|
-| Target Platform | |
-| Resolution | |
-| Build Type | |
+| Target Platform |Windows |
+| Build Type |Release build |
 
 ---
 
@@ -82,13 +81,13 @@ HermitHunter2dGame(https://img.youtube.com/vi/SUJwRp6EE3o/0.jpg)](https://www.yo
 | **Duration** |1:59 |
 | **Description** |Walkthrough of my game, showing most of the features with narration of what they are. youtube description is "Game made for Ct project 2026"|
 
-### 2.2 Feature Highlight Clips  - ask jones
+### 2.2 Feature Highlight Clips 
 
 | Clip | Description | Link |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|0.55 |Bubble jump feature gameplay |https://www.youtube.com/watch?v=SUJwRp6EE3o |
+|1.07 |Dropping off items at the MORG before the text changes |https://www.youtube.com/watch?v=SUJwRp6EE3o |
+|1.26 |Example of the death feature, player falls on spike and dies |https://www.youtube.com/watch?v=SUJwRp6EE3o |
 
 ---
 
@@ -149,13 +148,11 @@ HermitHunter2dGame(https://img.youtube.com/vi/SUJwRp6EE3o/0.jpg)](https://www.yo
 
 ---
 
-### 4.2 Cut Scenes & Cinematics - ask jones what to write
+### 4.2 Cut Scenes & Cinematics
 
 | Cut Scene | Trigger | Description | Screenshot / Still |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+N/A, no cutscenes were provided to me, although space has been allocated in code for where one would go.
 
 
 
@@ -177,9 +174,7 @@ HermitHunter2dGame(https://img.youtube.com/vi/SUJwRp6EE3o/0.jpg)](https://www.yo
 
 | Feature | Description | Screenshot |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+N/A this game features no becuase we wanted to go for a simple and clean style, and so no effects were needed.
 
 
 
@@ -219,7 +214,7 @@ N/A, This game has NO audio as we were unable to create good enough sound effect
 |Inventory|Shows what you have and havent collected | ![Inventory](image-11.png)|
 |Smiles |Shows what items you had when you last returned to the MORG |![Smiles](image-12.png) |
 
-> Add screenshot images using: `![HUD Element](./docs/screenshots/hud_name.png)`
+
 
 ### 6.2 Menus
 | Menu | Purpose | Screenshot |
@@ -227,7 +222,7 @@ N/A, This game has NO audio as we were unable to create good enough sound effect
 | Main Menu |allows the player to begin the game or exit, more features could be added | ![Menu](image-13.png)|
 | Game Over Screen |Shows that the player is dead | ![DeathScreen](image-14.png)|
 
-> Add screenshot images using: `![Menu Name](./docs/screenshots/menu_name.png)`
+
 
 ---
 
@@ -236,26 +231,26 @@ N/A, This game has NO audio as we were unable to create good enough sound effect
 ### 7.1 Scene List
 | Scene Name | Purpose | Description |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+|StartScene |Menu scene for the player to start or quit out |Inspired by the ELDEN RING menu, has two butons one that makes you quit out and one that starts the game at level one |
+|LevelOne |First level for player to learn mechanics |currently empty, but would be made up of the things in the demo scene and would be easy in difficulty with more descriptive npc text to give tips |
+|LevelTwo |Second more difficult level to test the player |also currently empty, would resemble the first level with harder parkour and likely visually different terrian/background that I dont have because I am not an artist, also the NPC would be mean for humourus purposes |
+|DemoScene |A scene that will be unplayable in the actual build, for demoing features |A small scene with all the features in the game in close proximity for use in testing and displaying features |
 
 ### 7.2 Level / Environment Screenshots
 | Level / Area | Description | Screenshot |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|Lower demo area |A lower section of the demo scene that features blocks for parkour and a spike to kill you |![LowerDemo](image-15.png) |
+|Raised demo area |A raised area that features the MORG and most of the Collectables |![Platou](image-16.png) |
+|BubbleJump Segment |A group of bubbles for the player to jump on to collect another limb | ![Bubbles](image-17.png)|
 
 > Add screenshot images using: `![Level Name](./docs/screenshots/level_name.png)`
 
 ### 7.3 Scene Management
 | Feature | Description |
 |---|---|
-| Scene Loading Method | |
-| Persistent Data Between Scenes | |
-| Scene Transition Effects | |
+| Scene Loading Method |SceneManager.LoadScene("LevelTwo");|
+| Persistent Data Between Scenes | none|
+| Scene Transition Effects |none |
 
 ---
 
@@ -264,25 +259,25 @@ N/A, This game has NO audio as we were unable to create good enough sound effect
 ### 8.1 Script Summary
 | Script Name | Attached To | Responsibility |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+|Death |Player |A script that can be called anywhere to trigger the death state and reset the scene, plays the death particle effects and reveals the soulslike YOUDIED text |
+|PlayerController |Player |Script that handles the players movement and several other smaller things like collisn with a spike, or ensureing movement stops after death|
+|ItemCollector |Player |Item collector detects collisions with collectables and keeps track of what items the player has collected|
+|Dropoff |MORG |Keeps track of what items the player had last time they visited the MORG and updates the NPC speech box, and moves to the next scene if the player has all limbs upon visit |
+
 
 ### 8.2 Key Algorithms / Logic
 | Feature | Script | Description |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|nested if|dropoffs |Putting an If statement within another if statement |
+|list string|dropoffs |Used a string to gather bools into a list and edit the list for a check |
+|flip|PlayerController |uses a bool to detect if the player if facing a direction and if so flip the players model dimentions to make them turn around |
 
 ### 8.3 Design Patterns Used
 | Pattern | Where Applied | Justification |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|async voids |Droppoff & death |async voids allow me to use the await task command and cause the script to pause, this way I can do something like display a UI object, and then give the player a chance to see it before moving on |
+|shared variables |death - playercontroller & itemColector - Droppoff |shared variables are used repeatedly so as too eep scripts seperate and easier to determine function but can still share data |
+|boolvaribles |all scripts save for start menu |A simple method to fix many problems and simplify code, if I encounter a problem I add MORE VARIABLES|
 
 ---
 
