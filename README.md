@@ -283,258 +283,317 @@ N/A, This game has NO audio as we were unable to create good enough sound effect
 
 ## 9. Development Techniques & Tutorials Acknowledged
 
+
 > List every tutorial, course, video, or article that informed or guided your implementation. Include what you used it for and what you changed or adapted.
+
 
 | # | Title | Author / Creator | URL / Source | What You Used It For | What You Changed / Adapted |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
+| 1 |Start Menu - 2D Platformer Unity #28 |Game Code Library |https://www.youtube.com/watch?v=paaBTt5GcMU&list=PLaaFfzxy_80EWnrTHyUkkIy6mJrhwGYN0&index=29 |main menu |I used this to create the main menu for my game, although mine was simpler than in the video and based off the ELDEN RING game menu |
+| 2 |Movement with Unity Input System - 2D Platformer Unity #1 |Game Code Library |https://www.youtube.com/watch?v=xb3d7HarKcI&list=PLaaFfzxy_80EWnrTHyUkkIy6mJrhwGYN0&index=2 |movement controller |utilized use of the input component and used code |
+| 3 | How can I make a list for an array of bools (bool[])|lazyghost - unity discussions |https://discussions.unity.com/t/how-can-i-make-a-list-for-an-array-of-bools-bool/923897 | for bool lists |Learnt how to make a list of bools |
+| 4 |Object.bool |Unity Documentation|https://docs.unity3d.com/6000.5/Documentation/ScriptReference/Object-operator_Object.html | for bools |Learnt how bools work and how to implement them for the various variables in my game |
+| 5 |no title, various small lines of code |copilot |https://copilot.microsoft.com/ |lots of code snippets |various smaller segments of code like how to format a getkeydown or check if all bools in a list were true |
+| 6 |Idle, Run, Jump, Fall, Wallslide Platformer Animations - 2D Platformer Unity #5 |Game Code Library |https://www.youtube.com/watch?v=vFYQ3Ge4XvY&list=PLaaFfzxy_80EWnrTHyUkkIy6mJrhwGYN0&index=6 |animations |followed steps for getting animations to work |
+| 7 | Sprite Sheet to Tilemap - 2D Platformer Unity #2|Game Code Library |https://www.youtube.com/watch?v=dsHe_luj8XI&list=PLaaFfzxy_80EWnrTHyUkkIy6mJrhwGYN0&index=3|tiles |followed steps for getting tilemap to work |
+
+
+
 
 ---
 
+
 ## 10. Third-Party Content Acknowledgements
 
+
 > All third-party assets (art, audio, fonts, scripts, packages) must be listed here with their licence. Using an asset without acknowledgement may constitute academic misconduct.
+
 
 ### 10.1 Visual Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+N/A - all visual assets in my game were created by myself or my Multimedia partner, save for a certain placeholder that is an image of the character EVA UNIT - 01 from the show NEON GENESIS EVANGELION
+
 
 ### 10.2 Audio Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+N/A no sound assests
+
 
 ### 10.3 Scripts & Code Snippets
 | Script / Snippet | Source | Licence | URL | Used For | Changes Made |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
+N/A no code from outside sources was used, save for the things mentioned above
+
 
 ### 10.4 Unity Packages & Plugins
 | Package Name | Version | Source | Licence | URL | Purpose |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|Cinemachine | 3.1.6 |UnityRegistery |Clipper |https://packages.unity.com |Smart camera tools for passionate creators. Cinemachine 3 is a newer and better version of Cinemachine, but upgrading an existing project from 2.X will likely require some effort.  If you're considering upgrading an older project, please see our upgrade guide in the user manual |
+|2D Tilemap Editor |1.0.0| UnityRegistery |MIT |https://packages.unity.com |2D Tilemap Editor is a package that contains editor functionalities for editing Tilemaps. |
+|2D SpriteShape |10.0.7 |UnityRegistery | SGI FREE SOFTWARE LICENSE B (Version 2.0, Sept. 18, 2008) |https://packages.unity.com |SpriteShape Runtime & Editor Package contains the tooling and the runtime component that allows you to create very organic looking spline based 2D worlds. It comes with an intuitive configurator and a highly performant renderer. |
+|Input System |1.14.2 |UnityRegistery |Licensed under the Unity Companion License for Unity-dependent projects (see https://unity3d.com/legal/licenses/unity_companion_license). |https://packages.unity.com |A new input system which can be used as a more extensible and customizable alternative to Unity's classic input system in UnityEngine.Input.|
+|Unity UI |2.0.0|UnityRegistery |Licensed under the Unity Companion License for Unity-dependent projects (see https://unity3d.com/legal/licenses/unity_companion_license).|https://packages.unity.com |Unity UI is a set of tools for developing user interfaces for games and applications. It is a GameObject-based UI system that uses Components and the Game View to arrange, position, and style user interfaces. ​ You cannot use Unity UI to create or change user interfaces in the Unity Editor. |
+
 
 ### 10.5 Fonts
 | Font Name | Creator / Source | Licence | URL |
 |---|---|---|---|
-| | | | |
-| | | | |
+N/A No fonts outside of the default unity fault were utilized
+
 
 ---
+
 
 ## 11. Challenges & Solutions
 
+
 | # | Challenge Encountered | How It Was Solved |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 |Getting data across scripts |Referencing them in other scripts by naming them, defining variables, and connecting them in the editor |
+| 2 |freezing player on death |use of an isalive bool, the player can only move if isalive is true, so I set it to false in the death script and grab it in the player movement script |
+| 3 |bool list updating wrong |The problem at the time was that the list was constantly adding on top of itself instead of overwriting previous data, this made the list forever get longer and made it useless to check if they were all true, to fix this I simply had the list clear itself after the check so it would be empty for the next one |
+| 4 |pixel sprites being blurry |I used Point no filter to remove the filter causing blur |
+| 5 |wanting scripts to pause before doing the next line |Using Async Voids so I can use the await task command |
+
+
+
 
 ---
+
 
 ## 12. Branch Development Summary
 
+
 > One section per feature branch. Add or remove sections to match your repository. Branches should be named for the feature they implement e.g. `feature/player-movement`. Link each branch name directly to the branch in your GitHub repository.
+
 
 ---
 
+
 ### Branch 1 — `main`
+
 
 | Field | Detail |
 |---|---|
 | **Branch Name** | `main` |
 | **Purpose** | Stable, releasable version of the game |
-| **Merged From** | |
-| **Final Commit** | |
+| **Merged From** |N/A |
+| **Final Commit** |DOC:FINAL |
+
 
 ---
 
-### Branch 2 — `feature/`
+
+### Branch 2 — `YOUDIED/`
+
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |YOUDIED |
+| **Feature Developed** |callable death function |
+| **Merged Into** |Main |
+| **Date Started** |12 aug |
+| **Date Merged** |27 aug |
+
 
 #### What Was Built
 <!-- Describe what this branch added or changed -->
 
+
+In this branch I built the Death script and function that freezes the players movement, plays a particle effect, and restarts the scene.
+I built this function in its own script so I could call it from anywhere when I want the player to die, making future development far easier
+
+
 #### Key Commits
 | Commit Message | What Changed |
 |---|---|
-| | |
-| | |
-| | |
+|added death screen |Added the death ui effects and hid them |
+|Finished |successfully made death ui show up on calling the function, and had player be frozen |
+
+
+
 
 #### Problems Encountered & Resolved
 | Problem | Resolution |
 |---|---|
-| | |
-| | |
+|freezing player on death |use of an isalive bool, the player can only move if isalive is true, so I set it to false in the death script and grab it in the player movement script  |
+|wanting scripts to pause before doing the next line |Using Async Voids so I can use the await task command  |
+
 
 #### Screenshot / Evidence
 <!-- Add a screenshot of the feature working -->
 > `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
+![DeathScreen](image-14.png)
 ---
 
-### Branch 3 — `feature/`
+
+### Branch 3 — `camerastuff&friends(background)/`
+
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |camerastuff&friends(background) |
+| **Feature Developed** |getting the camera to follow the player, stay in bounds, and also adding the background |
+| **Merged Into** |Collectables |
+| **Date Started** |jul 1st |
+| **Date Merged** |jul 27 |
+
 
 #### What Was Built
+I used the Cinemachine package to get the camera to follow the player and then confined the camera to a border using a multisided hitbox that can be configured, along with adding placeholders for later use and the background
 
 
 #### Key Commits
 | Commit Message | What Changed |
 |---|---|
-| | |
-| | |
-| | |
+|feature camcolider | added the cinemachine and got the camera to follow the player|
+|feature:placeholders |added and implemented various placeholders for later use|
+
 
 #### Problems Encountered & Resolved
 | Problem | Resolution |
 |---|---|
-| | |
-| | |
+N/A everything worked fine
+
 
 #### Screenshot / Evidence
 > `![Feature Name](./docs/screenshots/branch_feature_name.png)`
 
----
 
-### Branch 4 — `feature/`
+---![alt text](image-20.png)
+The green box is the camera confiner
+
+
+### Branch 4 — `Limb_Depot/`
+
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |Limb_Depot |
+| **Feature Developed** |Created the depot or "MORG" that the player drops limbs at |
+| **Merged Into** |Main |
+| **Date Started** |3 sep |
+| **Date Merged** |6 sep |
+
 
 #### What Was Built
+Created a location that functioned as an npc and a drop off for the body parts collected by the player, this depot was able to tell what parts the player had, mark them down, check if all parts had been collected and if so, start a new level, and provide the player with dialogue
 
 
 #### Key Commits
 | Commit Message | What Changed |
 |---|---|
-| | |
-| | |
-| | |
+|Feature: list |creating the list that determined if all were true and getting the depot to respond to the player, however the list itself was not fully functioning |
+|feature: ListFinal |got the list to work by editing the list code to stop it from elongating |
+|put the FREAKING scene build |Created a second scene and got the Depot to successfully send the player to the second scene when conditions were met |
+
 
 #### Problems Encountered & Resolved
 | Problem | Resolution |
 |---|---|
-| | |
-| | |
+|bool list updating wrong |The problem at the time was that the list was constantly adding on top of itself instead of overwriting previous data, this made the list forever get longer and made it useless to check if they were all true, to fix this I simply had the list clear itself after the check so it would be empty for the next one  |
+|Scene transfer failing |correctly oriented build settings so the scene was registered and would be detected |
+
 
 #### Screenshot / Evidence
 > `![Feature Name](./docs/screenshots/branch_feature_name.png)`
 
----
 
-### Branch 5 — `feature/`
+![alt text](image-21.png)
+
+
+### Branch 5 — `Collectables/`
+
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |Collectables |
+| **Feature Developed** |made collectable items and an inventory UI |
+| **Merged Into** |Main |
+| **Date Started** |jul 27 |
+| **Date Merged** |jul 29 |
+
 
 #### What Was Built
+In this branch I created a working set of collectable items that once touched by the player would be recorded in a inventory ui in the top right by displaying their image
 
 
 #### Key Commits
 | Commit Message | What Changed |
 |---|---|
-| | |
-| | |
-| | |
+| added sprites to game|created and added all sprites for the next change|
+|feature inventory |Successfully implemented all sprites and allowed the player to collect them and add them to inventory |
+
 
 #### Problems Encountered & Resolved
 | Problem | Resolution |
 |---|---|
-| | |
-| | |
+|collision and gravity problems, had issues of the sprites not remaining in location and also the player being unable to actually collect them on touch |Solved by editing rigidbody and box collider settings such as freezing position and rotation and ensuring the hitbox was trigger |
+
 
 #### Screenshot / Evidence
 > `![Feature Name](./docs/screenshots/branch_feature_name.png)`
 
----
 
-### Branch 6 — `feature/`
+---![alt text](image-21.png)
+
+
+### Branch 6 — `obstacles/`
+
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |obstacles |
+| **Feature Developed** |simple branch featuring spikes and jumpBubbles |
+| **Merged Into** |Main |
+| **Date Started** |17 sep |
+| **Date Merged** |18 sep |
+
 
 #### What Was Built
+Small obstacles building off already made features, proving their effectiveness for future use. including "bubble jumps" circles the player could jump while touching but not stand on and spikes that would trigger the death function, also used prefabs to create many of these objects
 
 
 #### Key Commits
 | Commit Message | What Changed |
 |---|---|
-| | |
-| | |
-| | |
+|WIP prefabs |Created both the spike and bubbles as prefabs although neither worked |
+|Feature: evil spike |implemented the spike triggering death on collision using the premade callable death function |
+|wa |got the bubble jump to work by giving it the same settings as the collectable items but assigning them to the ground layer so the players ability to jump would work |
+
 
 #### Problems Encountered & Resolved
 | Problem | Resolution |
 |---|---|
-| | |
-| | |
+N/A everything worked because it built on previous features that were designed to be easily used for more things down the line, in other words the "structure" code paid off
+
 
 #### Screenshot / Evidence
 > `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
+![DeathScreen](image-14.png)
+![bubble jumps](image-22.png)
 ---
+
 
 ### Branch Development Overview
 
+
 > Complete this summary table once all branches are finished.
+
 
 | Branch Name | Feature | Date Started | Date Merged | Status |
 |---|---|---|---|---|
-| `main` | Stable release | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
+| `main` | Stable release |14 may |24 september |unfinished |
+| `YOUDIED/` |Death |12 aug |27 aug |finished |
+| `camerastuff&friends(background)/` |Camera & placeholders |jul 1 |jul 27 |finished |
+| `Limb_Depot/` |MORG drop off zone |3 sep |6 sep |finished |
+| `Collectables/` |Collectable limbs |jul 27 |jul 29 |finished |
+| `obstacles/` |Bubble jump & spike |17 sep |18 sep |finished |
+
 
 ---
+
 
 > **Student Declaration:** All work submitted is my own except where explicitly acknowledged above.
